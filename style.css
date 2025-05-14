@@ -1,0 +1,72 @@
+/* Kręcące się kółko - ładowanie */
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ddd;
+  border-top: 5px solid blue;
+  border-radius: 50%;
+  animation: spin 1.25s linear infinite;
+  margin-bottom: 2em;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Kółko do mowy */
+#dot {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(21, 18, 224);
+  border-radius: 50%;
+  margin-top: 1em;
+}
+
+/* Pulsowanie tylko podczas mówienia */
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button {
+  padding: 0.5em 1em;
+  margin: 1em;
+  border-radius: 5px;
+  border: 2px solid black;
+  background: #eee;
+  cursor: pointer;
+}
+
+li {
+  margin: 0.3em 0;
+}
+
+#echo {
+  font-weight: bold;
+  margin-top: 1em;
+  color: #444;
+}
